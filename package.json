@@ -1,0 +1,21 @@
+{
+  "name": "chord-pubsub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http2": "^3.3.6",
+    "mqtt-server": "^0.1.0",
+    "murmurhash3": "^0.3.5",
+    "sockjs": "^0.3.18",
+    "uuid": "^2.0.3"
+  },
+  "devDependencies": {
+    "mqtt": "^2.0.1"
+  }
+}
