@@ -34,6 +34,7 @@ module.exports = {
 			if(message.t == 'p') {
 				remoteSubscribers.send(message.c, {t:'pp', c:message.c, d:message.d});
 			} else if(message.t == 's') {
+				console.log(from.id, id, message);
 				remoteSubscribers.add(message.c, from.id, function(message) {
 					chordSend(from, null, message);
 					return true;
@@ -130,10 +131,10 @@ module.exports = {
 				uuid: uuid
 			}
 
+			localSubscribers.add(channel, uuid, cb);
 			if(!subscribeTimers[channel]) {
 				register_subscriber(channel, 0);
 			}
-			localSubscribers.add(channel, uuid, cb);
 			var stringified = JSON.stringify(params);
 			return stringified;
 		}
